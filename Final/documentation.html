@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<head>
+
+	<!--
+	Ms Torres's Home Page > Documentation
+		documentation.html
+	Author: Heidi Torres (Stein)
+	Date:   Dec 2016
+
+	Stylesheet: torres-styles.html
+	Site Pages: index.html, blog.html, calendar.html, lessons.html, about.html, documentation,html
+	-->
+
+	<title>Documentation</title>
+	<style type="text/css">
+
+		body {
+			max-width: 800px ;
+		}
+
+		h1, h2, h3 {
+			font-family: 'Arial', sans-serif ;
+		}
+
+		h1 {
+			font-size: 1.75em ;
+		}
+
+		h2 {
+			font-size: 1.5em ;
+		}
+
+		h3 {
+			font-size: 1.25em;
+		}
+
+		p {
+			font-family: 'Times New Roman', serif  ;
+			font-size: 12pt ;
+			line-height: 1.25;
+		}
+
+		code {
+			background-color: hsl(0, 0%, 85%) ;
+			font-family: monospace ;
+			padding: 0 0.5em 0 0.5em ;
+		}
+
+		#mainHeader h1 {
+			text-align: center ;
+		}
+
+	</style>
+
+</head>
+
+<body id="documentation" >
+
+<header id="mainHeader" class="clear">
+
+	<h1>Documentation</h1>
+	<hr /> 
+
+</header>
+
+<section id="mainSection">
+
+	<h1>General Notes</h1>
+
+	<p>My project represents a web site for a (fictional) elementary school teacher at the beginning of a school year. As someone with a background in education, this idea interested me, and allowed me to use lots of fun colors and designs. Included pages are "Home," "Blog," "Calendar," "Lessons & Homework," and "About Me."</p>
+
+	<h2>Page Size</h2>
+	<p>Each page <code>body</code> element uses the property <code>max-width: 1280px</code>. </p>
+
+	<h2>Main Headers</h2>
+	<p>For each page, I have a main header, which contains a background image, a text box with a translucent background, and a horizontal rule. The header sizes were chosen based on each background image used. Each background image uses the <code>background-size:cover</code> property so that it fills the size of the background, and is responsive to window size. </p>
+
+	<p>In some pages (Blog and Lessons), the header text box has been rotated using the <code>transform</code> property.</p>
+
+	<h2>Navigation</h2>
+	<p>Each page has a horizontal navigation bar. This is a <code>ul</code> element, with each <code>li</code> element set to float left. </p>
+
+	<h2>Layout</h2>
+	<p>Page layout generally occupies 95% width. Article sections use <code>width: 70%</code>, and sidebars use <code>width: 24%</code>. Sidebars generally contain the teacher's (fictional) contact information, and some other items relevant to the page. </p>
+
+	<h2>Style Sheets</h2>
+	<p>All pages use the <strong>"torres-styles.css"</strong> style sheet. Inline / embedded styles were not used. The style sheet is well organized and commented, and the code is thoughtful and efficient.</p>
+
+	<h2>IDs and classes</h2>
+	<p>Each page's <code>body</code> element has a unique ID. These IDs are used for styles that apply only to one page. The IDs match the file names, e.g. <code>#home</code>, <code>#blog</code>, etc.</p>
+
+	<p>Layout elements have IDs, such as <code>#mainHeader</code> for the main header of the page. Certain style choices, such as grey backgrounds, were created using classes, such as <code>.bg-lt</code> (light background) and <code>.bg-dk</code> (dark background). I used classes for some styles that appeared repeatedly but arbitrarily across different pages and/or elements.</p>
+
+	<hr />
+
+
+	<h1>Fonts</h1>
+
+	<p>The body text font is <strong>"Lato"</strong> and the header text is <strong>"ArchitectsDaughter"</strong>. Fonts are stored with the page.</p>
+
+	<p>The elements <code>strong</code> and <code>em</code> were used to set bold and italic text, respectively, and these styles are explicitly set in the CSS. (Example: see the bulleted list on the Home page.) I also created the classes <code>.strong</code> and <code>.em</code> for the same purpose, but I don't believe I ended up using them. In <strong>"lessons.html"</strong>, the <code>dt</code> elements (the course subjects) are set with <code>font-variant: small-caps</code>. </p>
+
+
+	<h1>Colors and Backgrounds</h1>
+	<p>Generally, the text is set to a shade of black (<code>hsl(0, 0%, 25%)</code> or <code>hsl(0, 0%, 5%)</code>). In the cases of dark or colored backgrounds (e.g. main page headers, footers), text is a shade of white (e.g. <code>hsl(0, 0%, 100%)</code> or <code>hsl(0, 0%, 85%)</code>). The classes <code>.dark</code>, <code>.bg-lt</code>, and <code>.bg-md</code> were also used to set text colors. An example of the <code>.bg-lt</code> class is in the sidebar of each page (with the text "* This contact information is fictional.") </p>
+
+	<p>Links are styled for text color, for <code>link</code>, <code>visited</code>, <code>hover</code>, and <code>active</code> states. </p>
+
+	<p>Each main header features a different background image, set with CSS. Page titles were set in a colored text box. These boxes used different hsla color values, with white font. Additionally, headers had a colored horizontal rule. Most pages used an aqua colored rule, and <strong>"lessons.html"</strong> used pink.</p>
+
+	<p>The navigation bar has a light blue background, with a darker blue on hover, as well as colored link states.</p>
+
+	<p>Tables (seen in <strong>"home.html"</strong> and <strong>"calendar.html"</strong> have colored headers.</p>
+
+	<p>The <code>::selection</code> property was used to set the background color of selected text (a light blue). This might be extra credit, as I do not think this was covered in class.</p>
+
+
+	<h1>Tables</h1>
+
+	<p>The <strong>"home.html"</strong> page features a table, detailing a weekly class schedule. Borders are styled, with the outer border being thicker than the inner cell borders. The header row and left column are both set with a background color and bold text. Styles are set for <code>padding</code>, <code>text-align</code>, and <code>vertical-align</code>. Each column is set with <code>width: 11%</code>. The <code>colspan</code> attribute is used for some cells. </p>
+
+	<p>The <strong>"calendar.html"</strong> page features an even more verbose table, showing a monthly calendar for the academic year. The overall calendar is set in a 4 x 3 table. Each month is a nested table, occupying one of the 12 cells in the greater table. Borders are styled, with the outer borders being thicker than the inner cell borders. The header rows (for months and weekdays) are set with a background color and bold text. The weekday rows are set using the <code>:first-of-type</code> selector. Styles are set for <code>padding</code>, <code>text-align</code>, and <code>vertical-align</code>. Each column is set with <code>width: 11%</code>. The <code>colspan</code> attribute is used for some cells. </p>
+
+	<p>Additionally, for <strong>"calendar.html"</strong> I used classes to distinguish certain days on the calendar. The <code>.bg-lt</code> class was used for weekends to give them a grey background. For days off from school, I used the <code>.day</code> class to set a red background. And for the first/last day of the term, I used <code>.term</code> to set an aqua background. </p>
+
+
+	<h1>Lists</h1>
+	
+	<p>The <strong>"home.html"</strong> page has a bulleted list, with some general notes about what to find on each page. Styles are set for <code>padding</code>, <code>margin</code>, <code>list-style-position:outside</code>, and <code>list-style-type:disc</code>. </p>
+
+	<p>The <strong>"blog.html"</strong> page has an unordered list in the sidebar. Bullets are removed, and padding is reduced for sidebar lists. Additionally, this page features the <code>list-style-image</code> property, setting the custom bullet (<strong>"time-icon.png"</strong>) for the dates and times of events (see: "Back to School Night" and "Field Trip.") </p>
+
+	<p>The <strong>"calendar.html"</strong> page has a lengthy <code>dl</code> list. Classes are used to set background colors for school holidays, as well as the first/last day of each term. Styles are set for <code>margin</code> and <code>padding</code>, and for the <code>font-weight</code> of <code>dt</code> elements (the dates in the list). </p> 
+
+	The <strong>"lessons.html"</strong> page also has <code>dl</code> lists. Here, the <code>dt</code> elements (the course subjects) are set with <code>font-variant: small-caps</code>. Also, within each <code>dt</code> element is a <code>ul</code> element, showing multiple lessons for each subject.
+
+<p>&nbsp;</p>
+<hr />
+
+	<h1>Other Items</h1>
+
+	<h2>Gradient</h2>
+	<p>The main navigation bar for each page uses a color gradient (<code>background: linear-gradient(to right, hsl(210, 100%, 60%), hsl(210, 100%, 60%), hsl(210, 100%, 30%) )</code>.</p>
+
+	<h2>Custom Bullets</h2>
+	<p>The <strong>"blog.html"</strong> page uses a custom bullet (<strong>"time-icon.png"</strong>) for the dates and times of events (see: "Back to School Night" and "Field Trip.") </p>
+
+	<h2>Custom Mouse Pointer</h2>
+	<p>The <strong>"home.html"</strong> and <strong>"about.html"</strong> each have image thumbnails, which are linked to the full size image file. These thumbnails feature a custom mouse pointer (<strong>"zoom-icon.png"</strong>), indicating that the user can click the thumbnail for a larger image. </p>
+
+
+	<h2>Overflow</h2>
+	<p>The <code>table</code> elements are set with <code>overflow-x: auto</code>. Additionally, <code>overflow: auto</code> is set for the <code>article</code> element and <code>#sidebar</code> aside in the <strong>"calendar.html"</strong> page. </p>
+
+
+	<h2>Opacity</h2>
+	<p>The thumbnail images in <strong>"home.html"</strong> and <strong>"about.html"</strong> are set with <code>opacity:0.75</code>. On <code>:hover</code>, the opacity changes to 1. </p>
+
+	<p>Additionally, <code>hsla()</code> color values are used throughout the site. Examples include the colored text boxes in each main header (alpha value 0.8), and the <code>box-shadow</code> property on images and tables. </p>
+
+	
+	<h2>Shadows</h2>
+	<p>Shadows are used for each <code>img</code> and <code>table</code> element. </p>
+
+	
+	<h2>Transformation</h2>
+	<p>Header text boxes were transformed in two pages. The setting was <code>transform: rotate(3deg)</code> for <strong>"blog.html"</strong>, and <code>transform: rotate(-3deg)</code> for <strong>"lessons.html"</strong>. </p>
+
+	
+	<h2>Transition</h2>
+	<p>For the thumbnail images in <strong>"home.html"</strong> and <strong>"about.html"</strong>, the opacity is set to change on <code>:hover</code>. This opacity change uses the property <code>transition: opacity 1.5s</code>. </p>
+
+	
+	<h2>Selective Styling</h2>
+	<p>Selective Styling was used liberally throughout the entire site. Some examples are listed below.</p>
+	
+	<p>The universal selector <code>*</code> was used for the CSS reset styles (near the top of the style sheet), as well as to set the <code>box-sizing: border-box</code> property for all elements. </p>
+
+	<p>Descendant selectors were used often (examples: <code>#mainHeader h1</code> and <code>article header h1</code>). </p>
+
+	<p>Pseudo classes were used to style link states, and also to style the background color of selected text (<code>:selection</code> selector). The <code>:first-of-type</code> selector was used for the table in <strong>"calendar.html"</strong>. </p>
+
+
+	<h2>Text Adjustments</h2>
+	<p>The style <code>text-indent</code> was used for definition list <code>dd</code> items. This is seen in <strong>"lessons.html"</strong> and <strong>"calendar.html"</strong>. </p>
+
+	<p>The style <code>vertical-align: middle</code> was used for table cells. Also, the <code>text-align: center</code> property was used for the main header text boxes. </p>
+
+
+	<p>&nbsp;</p>
+
+</section>
+
+
+</body>
+
+
+</html>
